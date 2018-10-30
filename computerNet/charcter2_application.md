@@ -19,6 +19,9 @@
 301 Moved Permanently（requested object moved, new location specified later in this message 【Location:】）、400 Bad Request（request message not understood by server）、404 Not Found（requested document not found on this server）505 HTTP Version Not Supported。</li>
 <li>代理服务器：代表原始服务器满足HTTP请求的网络实体，保存最近请求过的对象的拷贝。</li>
 <li>web缓存：既是服务器也是客户机，减少客户请求的响应时间，减少机构接入链路上的流量。</li>
-<li></li>
+<li>FTP文件传输协议：用户通过FTP用户代理，从远程主机上下载文件或向远程主机上传文件。FTP采用客户-服务器模式。使用TCP协议，使用端口20，21.</li>
+<li>控制连接和数据连接分离，控制连接使用端口21，传送客户命令和服务器响应，整个会话期间一直保持。数据连接使用端口20，传输文件，每个数据连接只传输一个文件，发送方关闭连接表示一个文件传输结束。不会混淆数据和命令/响应，简化协议设计和实现，在传输文件过程中可以继续执行其他的操作，便于控制传输过。以关闭数据连接的方式结束文件传输允许动态创建文件。</li>
+<li>电子邮件系统：三个主要组成部分包括：用户代理（编辑阅读回复邮件等）、邮件服务器、（用户信箱【存放到来的邮件】，发送报文序列【存放要发送的邮件】，报文传输代理MTA【运行在服务器后台的系统守护进程，负责在邮件服务器之间传输邮件，及将受到的邮件放入用户信箱】），简单邮件传输协议（客户-服务器模式，SMTP使用TCP作为传输层协议，服务器端口时25，采用命令/响应交互方式【命令：ASCII文本，响应：状态码和短语】，报文只能包括简单的ASCII文本。）。</li>
+<li>邮件的报文格式：报头和实体（只能用ASCII字符）。</li>
 </ol>
 
